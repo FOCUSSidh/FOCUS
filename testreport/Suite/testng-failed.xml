@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="browser" value="ch"/>
+  <test name="Test(failed)">
+    <parameter name="browser" value="ch"/>
+    <groups>
+      <run>
+        <include name="SIT"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="Testscript.script_Login">
+        <methods>
+          <include name="create_Report"/>
+        </methods>
+      </class> <!-- Testscript.script_Login -->
+      <class name="Testscript.driver_script">
+        <methods>
+          <include name="cloaseApp"/>
+          <include name="launchApp"/>
+          <include name="driverScript" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- Testscript.driver_script -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

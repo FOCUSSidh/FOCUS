@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Test">
+  <parameter name="browser" value="ch"/>
+  <groups>
+  	<run>
+  	 	
+  	<include name="SIT"></include>
+
+  	</run> 
+  </groups>
+ 
+    <classes>
+      <class name="Testscript.script_Login"/>
+      <class name="Testscript.script_Search"/>
+      <class name="Testscript.driver_script"/>
+      <class name="Testscript.script_PersonSearch"/>
+      <class name="Testscript.script_CaseCreation"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
