@@ -32,8 +32,9 @@ public class driver_script extends Base {
 	public void driverScript (Map hm) throws Exception{
 
 
-		String sheetname=hm.get("SheetName").toString();
-		String testdatasheetname=hm.get("TestDataSheetName").toString();
+		String sheetname = hm.get("SheetName").toString();
+		String testdatasheetname = hm.get("TestDataSheetName").toString();
+		String workBookName = hm.get("WorkbookName").toString();   
 		tcid = hm.get("TC_ID").toString();
 		order=hm.get("Order").toString();
 		pf_genericmethods genericmethods = new pf_genericmethods();
@@ -42,7 +43,7 @@ public class driver_script extends Base {
 
 		startTest=extentReports.startTest(tcid+"_" + order + "_" + browser_type);
 		driverscript.info("Started execution of test case " + tcid +"_" + order);
-		ExcelRW excelRW1 = new ExcelRW(System.getProperty("user.dir") + "\\src\\test\\resources\\Test_Data.xlsx");
+		ExcelRW excelRW1 = new ExcelRW(System.getProperty("user.dir") + "\\src\\test\\resources\\Tests\\" + workBookName + ".xlsx");
 		int testdatarowcount = excelRW1.rowcount(testdatasheetname);
 		int testdatacolcount = excelRW1.Colcount(testdatasheetname);
 		for(int s = 1;s<=testdatarowcount;s++){
