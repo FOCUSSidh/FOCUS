@@ -15,7 +15,7 @@ public class Utility {
 //	common method
 	public static  Iterator<Object[]> dp_commonlogic(String sheetname, String scriptname) throws Exception{
 	
-	ExcelRW excelRW = new ExcelRW(System.getProperty("user.dir") + "\\src\\test\\resources\\Test_Data.xlsx");
+	ExcelRW excelRW = new ExcelRW(System.getProperty("user.dir") + "\\src\\test\\resources\\Tests\\ExecutionManager.xlsx");
 		
 		int rowcount = excelRW.rowcount(sheetname);
 		int colcount = excelRW.Colcount(sheetname);
@@ -67,7 +67,7 @@ public static 	String getval(String key) throws Exception{
 
 public static  Iterator<Object[]> dp_testdata(String sheetname) throws Exception{
 	
-	ExcelRW excelRW = new ExcelRW(System.getProperty("user.dir") + "\\src\\test\\resources\\Test_Data.xlsx");
+	ExcelRW excelRW = new ExcelRW(System.getProperty("user.dir") + "\\src\\test\\resources\\Tests\\ExecutionManager.xlsx");
 		
 		int rowcount = excelRW.rowcount(sheetname);
 		int colcount = excelRW.Colcount(sheetname);
@@ -115,7 +115,7 @@ public static 	String getxPath(String key) throws Exception{
 
 public static void  writeExcel(String sheetname, String testcaseId, String OrderId, String columnname, String value) throws Exception{
 	
-	String fpath=System.getProperty("user.dir") + "\\src\\test\\resources\\Test_Data.xlsx";
+	String fpath=System.getProperty("user.dir") + "\\src\\test\\resources\\Tests\\ExecutionManager.xlsx";
 	
 	ExcelRW excelRW= new ExcelRW(fpath);
 		
@@ -151,32 +151,8 @@ public static void  writeExcel(String sheetname, String testcaseId, String Order
 					
 					break;
 				}
-				
-				
+
 			}
-			
-
-			
 			//excelRW.saveandclose(fpath);
-		
-			
-	
 	}
-
-
-
-
-
-	
-	
-
 }
-
-
-
-
-
-
-
-
-
