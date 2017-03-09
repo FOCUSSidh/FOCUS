@@ -124,10 +124,6 @@ public static void  writeExcel(String sheetname, String testcaseId, String Order
 		int column1=0;
 		int row1=0;
 		
-		
-				
-			
-				
 			for(int j=0;j<colcount;j++){
 				
 				String columnName = excelRW.readcellval(sheetname, 0, j);
@@ -136,7 +132,6 @@ public static void  writeExcel(String sheetname, String testcaseId, String Order
 					break;
 					}			
 			  }
-			
 			
 			for (int i=1;i<rowcount;i++){
 				
