@@ -59,11 +59,7 @@ public class driver_script extends Base {
 					String key1 = excelRW1.readcellval(testdatasheetname, 0, t);
 					String value1 = excelRW1.readcellval(testdatasheetname, s, t);			
 					hmap1.put(key1,value1);
-
-				}			
-
-
-
+				}
 			}
 		}
 
@@ -203,6 +199,5 @@ public class driver_script extends Base {
 		}
 
 	}
-
 
 }
