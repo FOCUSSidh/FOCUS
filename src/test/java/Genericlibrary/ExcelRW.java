@@ -55,13 +55,12 @@ public class ExcelRW {
 		
 	}
 	
-		
+
 //	write to cell
 	public void writecell(String sheetname,int row,int col,String val){
 		XSSFSheet sheet = wb.getSheet(sheetname);
 		sheet.getRow(row).getCell(col).setCellValue(val);	
-		
-		
+
 	}
 	
 //	Save and close
@@ -75,15 +74,7 @@ public class ExcelRW {
 //		Close the streams
 		fos.close();
 		fis.close();
-		
-		
+
 	}
 	
-	
-	
-	
-	
-	
-	
-
 }

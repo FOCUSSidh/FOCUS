@@ -2,21 +2,21 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="93757" started-at="2017-03-08T07:27:08Z" finished-at="2017-03-08T07:28:42Z">
+  <suite name="Suite" duration-ms="105752" started-at="2017-03-09T06:56:57Z" finished-at="2017-03-09T06:58:42Z">
     <groups>
       <group name="SIT">
         <method signature="driver_script.driverScript(java.util.Map)[pri:1, instance:Testscript.driver_script@128c152]" name="driverScript" class="Testscript.driver_script"/>
       </group> <!-- SIT -->
     </groups>
-    <test name="Test" duration-ms="93757" started-at="2017-03-08T07:27:08Z" finished-at="2017-03-08T07:28:42Z">
+    <test name="Test" duration-ms="105752" started-at="2017-03-09T06:56:57Z" finished-at="2017-03-09T06:58:42Z">
       <class name="Testscript.script_Login">
-        <test-method status="PASS" signature="create_Report()[pri:0, instance:Testscript.script_Login@9f73a2]" name="create_Report" is-config="true" duration-ms="313" started-at="2017-03-08T12:57:08Z" finished-at="2017-03-08T12:57:08Z">
+        <test-method status="PASS" signature="create_Report()[pri:0, instance:Testscript.script_Login@9f73a2]" name="create_Report" is-config="true" duration-ms="271" started-at="2017-03-09T12:26:56Z" finished-at="2017-03-09T12:26:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- create_Report -->
       </class> <!-- Testscript.script_Login -->
       <class name="Testscript.driver_script">
-        <test-method status="PASS" signature="launchApp(java.lang.String)[pri:0, instance:Testscript.driver_script@128c152]" name="launchApp" is-config="true" duration-ms="19459" started-at="2017-03-08T12:57:09Z" finished-at="2017-03-08T12:57:29Z">
+        <test-method status="PASS" signature="launchApp(java.lang.String)[pri:0, instance:Testscript.driver_script@128c152]" name="launchApp" is-config="true" duration-ms="24014" started-at="2017-03-09T12:26:58Z" finished-at="2017-03-09T12:27:22Z">
           <params>
             <param index="0">
               <value>
@@ -27,7 +27,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApp -->
-        <test-method status="PASS" signature="driverScript(java.util.Map)[pri:1, instance:Testscript.driver_script@128c152]" name="driverScript" duration-ms="69967" started-at="2017-03-08T12:57:29Z" data-provider="genericLibrary" finished-at="2017-03-08T12:58:39Z">
+        <test-method status="PASS" signature="driverScript(java.util.Map)[pri:1, instance:Testscript.driver_script@128c152]" name="driverScript" duration-ms="79309" started-at="2017-03-09T12:27:22Z" data-provider="genericLibrary" finished-at="2017-03-09T12:28:41Z">
           <params>
             <param index="0">
               <value>
@@ -38,7 +38,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverScript -->
-        <test-method status="PASS" signature="cloaseApp(org.testng.ITestResult)[pri:0, instance:Testscript.driver_script@128c152]" name="cloaseApp" is-config="true" duration-ms="3059" started-at="2017-03-08T12:58:39Z" finished-at="2017-03-08T12:58:42Z">
+        <test-method status="PASS" signature="cloaseApp(org.testng.ITestResult)[pri:0, instance:Testscript.driver_script@128c152]" name="cloaseApp" is-config="true" duration-ms="966" started-at="2017-03-09T12:28:41Z" finished-at="2017-03-09T12:28:42Z">
           <params>
             <param index="0">
               <value>

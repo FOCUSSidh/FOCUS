@@ -1,6 +1,5 @@
 package Testscript;
 
-
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -17,6 +16,7 @@ import com.relevantcodes.extentreports.LogStatus;
 
 import Genericlibrary.Base;
 import Genericlibrary.ExcelRW;
+import Genericlibrary.GlobalProperties;
 import Genericlibrary.Utility;
 import Pagefactory.pf_FOCUSHomepage;
 import Pagefactory.pf_Login;
@@ -59,11 +59,7 @@ public class driver_script extends Base {
 					String key1 = excelRW1.readcellval(testdatasheetname, 0, t);
 					String value1 = excelRW1.readcellval(testdatasheetname, s, t);			
 					hmap1.put(key1,value1);
-
-				}			
-
-
-
+				}
 			}
 		}
 
@@ -159,7 +155,14 @@ public class driver_script extends Base {
 				startTest.log(LogStatus.PASS, stepName,"Passed as the Step "  + stepName+"."+ startTest.addScreenCapture(getScreenshot()) );
 				break;
 
-			case"verifyCreation":
+			case "setVariable":
+				String variableName = hmap1.get(testData).toString();
+				WebElement variableValue=fd.findElement(By.xpath(xPath));
+				hmap1.put(variableName, variableValue.getText());
+				startTest.log(LogStatus.PASS, stepName,"Passed as the Step "  + stepName+"."+ startTest.addScreenCapture(getScreenshot()) );
+				break;
+				
+			case "verifyCreation":
 				try{
 					WebElement creationId=fd.findElement(By.xpath(xPath));
 
@@ -170,7 +173,7 @@ public class driver_script extends Base {
 						startTest.log(LogStatus.FAIL, stepName , "No Value found "  + stepName + " ." + startTest.addScreenCapture(getScreenshot()));
 					}
 				}
-
+				
 				catch(Exception e){
 					startTest.log(LogStatus.INFO, stepName , stepName +": "+"Case Id not found"  + " ." + startTest.addScreenCapture(getScreenshot()));
 					fd.close();
@@ -203,6 +206,5 @@ public class driver_script extends Base {
 		}
 
 	}
-
 
 }
