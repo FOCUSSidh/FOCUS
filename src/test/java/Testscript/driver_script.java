@@ -156,9 +156,8 @@ public class driver_script extends Base {
 				break;
 
 			case "setVariable":
-				String variableName = hmap1.get(testData).toString();
 				WebElement variableValue=fd.findElement(By.xpath(xPath));
-				hmap1.put(variableName, variableValue.getText());
+				hmap1.put(testData, variableValue.getText());
 				startTest.log(LogStatus.PASS, stepName,"Passed as the Step "  + stepName+"."+ startTest.addScreenCapture(getScreenshot()) );
 				break;
 				
@@ -175,7 +174,7 @@ public class driver_script extends Base {
 				}
 				
 				catch(Exception e){
-					startTest.log(LogStatus.INFO, stepName , stepName +": "+"Case Id not found"  + " ." + startTest.addScreenCapture(getScreenshot()));
+					startTest.log(LogStatus.INFO, stepName , stepName +": "+"Not found"  + " ." + startTest.addScreenCapture(getScreenshot()));
 					fd.close();
 					fd.switchTo().window(parent);
 					throw new ElementNotFoundException("Record Not Created");
